@@ -1,0 +1,112 @@
+body
+{
+    background-color: blanchedalmond;
+    color: chocolate;
+    /*font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: 600;*/
+    font: 16px, 100, arial;
+    margin: 0;
+    line-height: 1.5em;
+}
+.box
+{
+    background-color: black;
+    color: bisque;
+    border:10px red solid;
+    border-right-style: groove;
+    padding: 5px 6px 7px 8px; 
+    margin: 20px 0;
+}
+a
+{
+    text-decoration: none;
+    color: black;
+}
+a :hover
+{
+    color: aqua; 
+}
+a :active
+{
+    color: brown;
+
+}
+a :visited
+{
+    color: crimson;
+}
+.container
+{
+    width:75%;
+    margin: auto; 
+}
+.box h1{
+    font-family: tahoma;
+    font-weight: 800;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    word-spacing: 1em;
+}
+.box2
+{
+    border: 5px fuchsia groove;
+}
+.categories
+{
+    border: 3px greenyellow groove;
+    margin-top:5px; 
+}
+.categories h2
+{
+    text-align: center;
+    text-transform: uppercase;
+}
+.categories ul
+{
+    list-style-type: square;
+}
+.categories li
+{
+    border: 2px skyblue groove;
+}
+.my-form
+{
+    padding: 20px;
+    display: block;
+}
+.my-form label
+{
+    display: block;
+}
+.my-form input
+{
+    padding: 8px;
+    width: 100%;
+}
+.block
+{
+    float: left;
+    width: 31.3%;
+    border: 2px gray dotted;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.left
+{
+    float: left;
+    width: 70%;
+    box-sizing: border-box;
+}
+.right
+{
+    float: right;
+    width: 30%;
+    border: 5px solid saddlebrown;
+    background-color: tomato;
+    box-sizing: border-box;
+}
+
+

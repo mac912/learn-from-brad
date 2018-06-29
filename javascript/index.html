@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>java script</title>
+    <!--<script src="javafile.js"></script>-->
+</head>
+<body>
+    <button onclick="this.innerHTML='you clicked'">click me</button>
+    <script>
+        //var colors=['red', 'blue', 'black'];
+        //colors[3]='pink';
+        //alert(colors.reverse());
+        for(var i = 0; i <= 10; i++)
+        {
+            console.log(i);
+        }
+        var a=5;
+        var b=6;
+        if(a==b && a==5)
+        {
+            console.log('This is true');
+        }
+        else
+        {
+            console.log('This is false');
+        }
+        var fruit = 'apple';
+        switch(fruit)
+        {
+            case "banana":
+            alert('banana');
+            case "apple":
+            alert('apple');
+            case "mango":
+            alert('mango');
+            default:
+            alert('sab moh maya ha');
+
+        }
+        var person =
+        {
+            firstname: 'brad', 
+            lastname:' roy', 
+            age:25, 
+            address:
+            {
+                street:'saini colony', 
+                city:'sikar', 
+                state:'rajasthan'
+            }
+        }
+        console.log(person.address.city);
+
+        var apple=new Object();
+        apple.color='red';
+        apple.shape='round';
+        apple.discribe = function()
+        {
+            return 'an apple color is '+this.color+ ' and shape is '+this.shape;
+        }
+        console.log(apple.discribe());
+        function Fruit(name, color, shape)
+        {
+            this.name=name;
+            this.color=color;
+            this.shape=shape;
+            this.discribe=function()
+            {
+                return 'a '+this.name+' color is '+this.color+ ' shape is '+this.shape;
+            }
+        }
+        var apple= new Fruit('apple', 'red', 'round');
+        var melon= new Fruit('melon', 'orange', 'round');
+        console.log(melon.discribe());
+        var users=[
+            {
+                name:'manish', 
+                age: 25
+            },
+            {
+                name:'karan', 
+                age: 25
+            },
+            {
+                name:'jay', 
+                age: 11
+            }
+        ]
+        console.log(users[0]);
+        </script>
+</body>
+</html>
