@@ -8,8 +8,15 @@
     <!--<script src="javafile.js"></script>-->
 </head>
 <body>
+        <h1 id="time"></h1>
+        <button onmouseover="showdate()" onmouseout="cleardate()">show date</button>
     <button onclick="this.innerHTML='you clicked'">click me</button>
     <script>
+          function showdate()
+        {
+            var time = document.getElementById('time');
+            time.innerHTML= Date();
+        }
         //var colors=['red', 'blue', 'black'];
         //colors[3]='pink';
         //alert(colors.reverse());
