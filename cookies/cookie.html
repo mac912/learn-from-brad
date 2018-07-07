@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HackCookies</title>
+    <script>
+        var myCookies = {}; 
+        function saveCookies()
+        {   
+            myCookies["_user"]=document.getElementById("user").value;
+            myCookies["_uage"]=document.getElementById("age").value;
+            //reusable code
+            document.cookie="";
+            var expiresAttrib=new Date(Date.now()+60*1000).toString();
+            var cookieString="";
+            for(var key in myCookies)
+            {
+                cookieString = key+"="+myCookies[key]+";"+expiresAttrib+";";
+                document.cookie=cookieString;
+            }
+            document.getElementById("out").innerHTML=document.cookie;
+        }
+        function loadCookies()
+        {
+            myCookies={};
+            var kv = document.cookie.split(";");
+            for(var id in kv)
+            {
+                var cookie= kv[id].split("=");
+                myCookies[cookie[0].trim()]=cookie[1];
+            }
+            document.getElementById("user").value=myCookies["_user"];
+            document.getElementById("age").value= myCookies["_uage"];
+        }
+    </script>
+</head>
+<body>
+    Users:  <input type="text" id="user">
+    Age: <input type="text" id="age">
+    <button onclick="saveCookies()">Save To Cookies</button>
+    <button onclick="loadCookies()">Load Form Cookies</button>
+    <p id="out"></p>
+    <div id="akshay"></div>
+</body>
+</html>

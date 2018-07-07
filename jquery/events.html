@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+        /*$(document).ready(function()
+        {
+            $('#button1').click(function()
+            {
+                alert('button clicked!');
+            });
+        });*/
+    </script>
+</head>
+<body>
+    <h1>Mouse Events</h1>
+    <button id="button1"> button1</button>
+    <button id="button2">button2</button>
+    <p class="para1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nihil per
+        ferendis deserunt dolores quae minus nostrum, consequuntur op
+        tio iusto hic soluta voluptatem sit repudiandae, qui tempora, eius culpa similique? Corrupti.
+    </p>
+    <form id="form">
+        <label>name</label><br>
+        <input type="text" name="name" id="name"><br>
+        <label>email</label><br>
+        <input type="text" name="email" id="email"><br>
+        <select name="gender" id="gender" id="gender">
+            <option value="male">male</option>
+            <option value="female"female>female</option><br>
+        </select><br><br>
+        <input type="submit" name="submit">
+    </form>
+    <!--<h1 id="coords"></h1>-->
+    <script>
+       /* $('#button1').click(function()
+        {
+             alert('Button clicked!');
+        });*/
+        
+       /* $('#button1').on('click', function()//both are right way to do this 
+        {
+            alert('Button clicked!');
+        });
+        */
+        /*$('#button2').on('click', function()
+        {
+            $('.para1').hide();
+        });
+        
+        $('#button2').on('click', function()
+        {
+            $('.para1').toggle();
+        });
+        $('#button1').on('click', function()
+        {
+            $('.para1').show();
+        });
+        $('#button1').dblclick(function()
+        {
+            $('.para1').toggle();
+        });
+        $('#button1').hover(function()
+        {
+            $('.para1').toggle();
+        });
+        $('#button1').on('mouseenter', function()
+        {
+            $('.para1').toggle();
+        });
+        $('#button1').on('mousemove', function()
+        {
+            $('.para1').toggle();
+        });
+        $('#button1').on('mouseleave', function()
+        {
+            $('.para1').toggle();
+        });
+        $('#button1').on('mousedown', function()
+        {
+            $('.para1').hide();
+        });
+        $('#button1').on('mouseup', function()
+        {
+            $('.para1').show();
+        });
+        $('#button1').click(function(e)
+        {
+            console.log(e.currentTarget.id);
+            console.log(e.currentTarget.innerHTML);
+            console.log(e.currentTarget.outerHTML);
+            alert(e.currentTarget.className);
+        });
+        $(document).on('mousemove', function(e)
+        {
+            $('#coords').html('coords: Y : '+e.clientY+' X: '+e.clientX); 
+        });*/ 
+        $('input').focus(function()
+        {
+           // alert('focus');
+           $(this).css('background', 'pink');//not working 
+        });
+        $('input').blur(function()
+        {
+           // alert('focus');
+           $(this).css('background', 'white');//not working 
+        });
+        $('input').keyup(function(e)
+        {
+            console.log(e.target.value);
+        });
+        $('#form').submit(function(e)
+        {
+            e.preventDefault();
+            var name=$('input#name').val();
+            console.log(name);
+        });
+    </script> 
+</body>
+</html>

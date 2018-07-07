@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox</title>
+    <style>
+        @media(min-width:768px)
+        {
+            .container-1
+            {
+                display: flex;
+            }
+        }
+        .container-1
+        {
+            display: flex;
+            align-items: flex-start;
+            flex-direction:row;
+
+        }
+        .container-1 div,  .container-2 div
+        {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        .container-2
+        {
+            display: flex;
+            justify-content: space-around;
+        }
+        .container-2-box
+        {
+            width: 27%;
+        }
+
+        .box-1
+        {
+            flex: 5;
+            order: 1;
+        }
+        .box-2
+        {
+            flex: 2;
+            order: 3;
+        }
+        .box-3
+        {
+            flex: 6;
+            order: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-1">
+        <div class="box-1">
+            <h1>
+                Box-1
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, laborum.</p>
+        </div>
+        <div class="box-2">
+            <h1>
+                Box-2
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, laborum.</p>
+        </div>
+        <div class="box-3">
+            <h1>
+                Box-3
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, laborum.</p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="box">
+            <h1>
+                Box-1
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, laborum.</p>
+        </div>
+        <div class="box">
+            <h1>
+                Box-2
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, laborum.</p>
+        </div>
+        <div class="box-">
+            <h1>
+                Box-3
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, laborum.</p>
+        </div>
+    </div>
+</body>
+</html>

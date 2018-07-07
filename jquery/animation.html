@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <style>
+        #box
+        {
+            background-color: black;
+            color: white;
+            width: 500px;
+            height: 90px;
+            padding: 40px;
+            text-align: center;
+        }
+        #box2{
+            background: red;
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button id="btnfadeout">fadeout</button>
+        <button id="btnfadein">fadein</button>
+        <button id="btnfadetog">fadetoggle</button>
+        <hr>
+        <button id="btnSlideUp">SlideUp</button>
+        <button id="btnSlideDown">SlideDown</button>
+        <button id="btnSlideTog">SlideToggle</button>
+        <button id="stop">stop</button>
+        <hr>
+    </div>
+    <hr> 
+    <div id="box">Hello World</div>
+    <button id="btnmoveLeft">moveLeft</button>
+        <button id="btnmoveRight">moveRight</button>
+        <button id="btnmoveArond">moveAround</button>
+    <div id="box2"></div>
+    <script>
+        $(document).ready(function()
+        {
+            $('#btnfadeout').click(function()
+            {
+                $('#box').fadeOut(2000, function()
+                {
+                    $('#btnfadeout').text('its gone');
+                });
+            });
+            $('#btnfadein').click(function()
+            {
+                $('#box').fadeIn(2000, function()
+                {
+                    $('#btnfadein').text('vo aa gaya');
+                });
+            });
+           $('#btnfadetog').click(function()
+            {
+                $('#box').fadeToggle(1000, function()
+                {
+                    $('#btnfadetog').text('tog');
+                });
+            });
+            $('#btnSlideUp').click(function()
+                {
+                    $('#box').slideUp(2000);
+                }
+            );
+            $('#btnSlideDown').click(function()
+                {
+                    $('#box').slideDown(2000);
+                }
+            );
+            $('#btnSlideTog').click(function()
+                {
+                    $('#box').slideToggle(2000);
+                }
+            );
+            $('#stop').click(function(){
+                $('#box').stop();
+            });
+            $('#btnmoveRight').click(function()
+                {
+                    $('#box2').animate({
+                        left: 500, 
+                        height: '300px',
+                        width: '300px',
+                        opacity: '0.5'
+                    });
+                }
+            );
+            $('#btnmoveLeft').click(function()
+                {
+                    $('#box2').animate({
+                        left: 0, 
+                        height: '100px', 
+                        width: '100px', 
+                        opacity:1
+                    });
+                }
+            );
+            $('#btnmoveArond').click(function()
+            {
+                var box= $('#box2');
+                box.animate(
+                    {
+                        left: 300
+                    }
+                );
+                box.animate(
+                    {
+                        top: 300
+                    }
+                );
+                box.animate(
+                    {
+                        left:0,
+                        top: 300
+                    }
+                );
+                box.animate(
+                    {
+                        left: 0, 
+                        top:0
+                    }
+                );
+            });
+        }); 
+    </script>
+</body>
+</html>

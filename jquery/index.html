@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>J query</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <h1 id="one">heading one</h1>
+    <p id="first">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+       Aliquam ad fuga obcaecati quos ut ipsum.
+       Nam, maiores doloribus magni reprehenderit
+       suscipit <span>dolorum quaerat commodi</span>, illo tempore unde recusandae. Iusto, hic!
+    </p>
+    <h2 class="two">heading two</h2>
+    <p class="second">
+        Lorem ipsum dolor sit amet <span> consectetur</span> adipisicing elit.
+       Harum minus accusantium id, atque vel, facilis molestias magni
+       laborum neque excepturi molestiae quae eligendi ullam esse aliquam? 
+       Quos saepe dolorem nemo.
+    </p>
+    <ul id="list">
+        <li> one</li>
+        <li> two</li>
+        <li> three</li>
+        <li> four</li>
+        <li> five</li>
+        <li> six</li>
+        <li> seven</li>
+    </ul>
+    <input type="submit" name="button">
+    <input type="submit" name="button2">
+    <input type="text">
+    <a href="http://google.com">google</a>
+    <a href="http://yahoo.com">yahoo</a>
+    <script>
+        // $('*').hide();
+       // $('h1').hide();
+       // $('#one').hide();
+       //$('h2.two').hide();
+       $('p span').css('color', 'red');
+        $('ul#list li:first').css('color', 'blue');
+        $('ul#list li:last').css('color', 'blue');
+        $('ul#list li:odd').css('color', 'blue');
+        $('ul#list li:even').css('background-color', 'red');
+        $('ul#list li:nth-child(3n)').css('list-style', 'none');
+        $('[href]').css('color', 'red');//Not working 
+        $('a[href="http://yahoo.com"]').css('color', 'green');//having problem in these code
+       
+    </script>
+</body>
+</html>

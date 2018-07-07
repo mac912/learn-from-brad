@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax</title>
+    <style>
+        h3{
+            color: blueviolet;
+        }
+        p{
+            color: crimson; 
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        // $(document).ready(function(){
+        //     $('#result').load('text.html');
+        // });
+        $.get('https://jsonplaceholder.typicode.com/posts', function(res)
+        {
+            console.log(res[0])
+            for(var i=0; i < res.length; i++){
+                $('#result').append('<h3> Title ' + i  + ':' + (res[i].title).split(' ')[0] + '</h3>');
+                $('#result').append('<p> Body ' + i  + ':' + res[i].body + '</p>');
+            }
+        });
+      
+    </script>
+</body>
+</html>

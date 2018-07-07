@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM-manipulation</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <style>
+        .myclass{
+            color: blue;
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <button id="button">button 1</button>
+    <p id="para1">Hi this is manish saini</p>
+    <p id="para2">I am a chandigarh university student</p>
+    <div id="mydiv"></div>
+    <ul id="list">
+        <li>one</li>
+        <li>tow</li>
+        <li>three</li>
+        <li>four</li>
+    </ul>
+    <ul id="users"></ul>
+    <input type="text" id="input">
+    <a href="https://google.com">google.com</a>
+    <script>
+        $('p#para1').css({color:'red', background:'yellow'});
+        $('p#para2').addClass('myclass');
+        $('p#para2').removeClass('myclass');
+        $('#button').click(function()
+        {
+            $('p#para2').toggleClass('myclass');
+        })
+       // $('#mydiv').text('Hello World');
+        //$('#mydiv').html('<h1>my world</h1>');
+        //alert($('#mydiv').text());
+        /*$('ul').append('<li>append</li>');
+        $('ul').prepend('<li>prepend</li>');
+        $('#para1').appendTo('#para2');
+        $('#para1').prependTo('#para2');
+        $('ul').before('<h1>hello</h1>');
+        $('ul').after('<h1>hello</h1>');
+        $('ul').empty();
+        $('ul').detach();
+        $('a').attr('target', '_blank');
+        alert($('a').attr('href'));
+
+        //$('a').removeAttr('target');*/
+        $('p').wrap('<h1>');
+        $('p').wrapAll('<h1>');
+        $('#input').keyup(function(e)
+        {
+            var code= e.which;
+            {
+                if(code == 13)
+                {
+                    e.preventDefault();
+                    $('ul').append('<li>'+e.target.value+'<li>');
+                }
+            }
+        });
+        var arr = ['manish', 'ajay', 'karan', 'ram'];
+        $.each(arr, function(i, val)
+        {
+            $('#users').append('<li>'+val+'</li>');
+        });
+    </script>
+</body>
+</html>
