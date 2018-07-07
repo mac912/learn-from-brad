@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid</title>
+    <style>
+        .wrapper
+        {
+            display: grid;
+            grid-template-columns: 30% 30% 40%;
+            /*grid-column-gap: 1em;
+            grid-row-gap: 1em;*/
+            grid-gap: 1em;
+
+        }
+        .wrapper > div{
+            background: #eee;
+            padding: 1em;
+        }
+        .wrapper > div:nth-child(odd)
+        {
+            background: #ddd;
+        }
+        .container > div{
+            background: #eee;
+            padding: 1em;
+        }
+        .container > div:nth-child(odd)
+        {
+            background: #ddd;
+        }
+        .container
+        {
+            display: grid;
+          /*  grid-template-columns: 1fr 1fr 1fr;*/
+          grid-template-columns:repeat(4, 1fr);
+            grid-gap: 1em;
+            grid-auto-rows: 100px;
+            grid-auto-rows: minmax(100px, auto);
+            justify-items: stretch;
+            align-items:flex-end;
+        }
+        .nested
+        {
+            display: grid;
+            grid-template-columns: 30% 30% 30%;
+            grid-gap: 1em;
+        }
+        .nested > div{
+            background: #eee;
+            padding: 1em;
+            border: 1px solid black;
+        }
+        .nested > div:nth-child(odd)
+        {
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Corrupti dicta vitae quisquam vero, nam saepe tenetur est consequuntur,
+            unde quia quidem, fuga minus dolorum dolore eos in aspernatur veritatis. 
+            Libero rem nam totam quibusdam. A at culpa nam voluptatum deserunt
+            , cupiditate excepturi quod. Voluptate asperiores unde reprehenderit ex
+            plicabo a aspernatur sit dicta, illum tenetur? Maxime asperiores
+            laboriosam ipsum quia, facere eum sed quos veritatis,
+            libero eius, excepturi amet doloribus voluptas.
+            Molestias adipisci recusandae mollitia animi, repudiandae corrupti inventore sequi labore!
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quisquam accusantium molestiae nostrum necessitatibus, at id quibusdam,
+            dolor unde ad consectetur nesciunt animi ea, excepturi esse illum molestias sapiente. 
+            Dignissimos nesciunt maxime hic ipsa repellat quae ullam voluptatibus ab similique laborum.
+        </div>
+        <div>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Corrupti dicta vitae quisquam vero, nam saepe tenetur est consequuntur,
+            unde quia quidem, fuga minus dolorum dolore eos in aspernatur veritatis. 
+            Libero rem nam totam quibusdam. A at culpa nam voluptatum deserunt
+            , cupiditate excepturi quod. Voluptate asperiores unde reprehenderit ex
+            plicabo a aspernatur sit dicta, illum tenetur? Maxime asperiores
+            laboriosam ipsum quia, facere eum sed quos veritatis,
+            libero eius, excepturi amet doloribus voluptas.
+            Molestias adipisci recusandae mollitia animi, repudiandae corrupti inventore sequi labore!
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quisquam accusantium molestiae nostrum necessitatibus, at id quibusdam,
+            dolor unde ad consectetur nesciunt animi ea, excepturi esse illum molestias sapiente. 
+            Dignissimos nesciunt maxime hic ipsa repellat quae ullam voluptatibus ab similique laborum.
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="nested">
+            <div>
+                lorem
+            </div>
+            <div>
+                lorem
+            </div>
+            <div>
+                lorem
+            </div>
+        </div>
+       <div>
+            Lorem ipsum dolor sit. 
+        </div>
+        <div>
+            Lorem ipsum dolor sit. 
+        </div>
+        <div>
+            Lorem ipsum dolor sit. 
+        </div>
+        <div>
+            Lorem ipsum dolor sit. 
+        </div>
+        <div>
+            Lorem ipsum dolor sit. 
+        </div>
+        <div>
+            Lorem ipsum dolor sit. te asperiores unde reprehenderit ex
+            plicabo a aspernatur sit dicta, illum tenetur? Maxime asperiores
+            laboriosam ipsum quia, facere eum sed quos veritatis,
+            libero eius, excepturi amet doloribus voluptas
+        </div>
+        <div>
+            Lorem ipsum dolor sit. 
+        </div>
+    </div>
+</body>
+</html>
